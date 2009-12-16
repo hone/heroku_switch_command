@@ -34,8 +34,7 @@ module Heroku::Command
             remote.remove
             # remove command isn't working for ruby-git 1.2.5
           rescue Git::GitExecuteError
-            shell("git remote rm #{remote.name}")
-          end
+            shell("git remote rm #{remote.name}") end
         end
       end
 
@@ -60,6 +59,8 @@ module Heroku::Command
 === Switch Command
 
 switch <appname>             # set as the default herou remote, to run commands against by default
+
+
 TEXT
 
       message
