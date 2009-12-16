@@ -58,7 +58,7 @@ module Heroku::Command
 
 === Switch Command
 
-switch <appname>             # set as the default herou remote, to run commands against by default
+switch <appname>             # set as the default heroku remote, to run commands against by default
 
 
 TEXT
