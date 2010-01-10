@@ -17,6 +17,6 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 =end
 
-require 'git'
-require File.dirname(__FILE__) + '/lib/heroku_switch_command'
-require File.dirname(__FILE__) + '/lib/help'
+Heroku::Command::Help.group('Switch Command') do |group|
+  group.command('switch <appname>', 'set as the default heroku remote, to run commands against by default')
+end

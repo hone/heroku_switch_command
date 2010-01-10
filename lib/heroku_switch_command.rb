@@ -50,23 +50,4 @@ module Heroku::Command
       "git@#{heroku.host}"
     end
   end
-
-  class Help
-    def usage_with_switch_command
-      message = usage_without_switch_command
-      message += <<TEXT
-
-=== Switch Command
-
-switch <appname>             # set as the default heroku remote, to run commands against by default
-
-
-TEXT
-
-      message
-    end
-
-    alias_method :usage_without_switch_command, :usage
-    alias_method :usage, :usage_with_switch_command
-  end
 end
