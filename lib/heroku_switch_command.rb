@@ -40,6 +40,7 @@ module Heroku::Command
 
       remote_location = default_git_remote_path(@args.first)
       git_repo.add_remote(DEFAULT_HEROKU_REMOTE_NAME, remote_location)
+      display("Switched heroku remote to #{git_repo.remote(DEFAULT_HEROKU_REMOTE_NAME).url}")
     end
 
     def default_git_remote_path(name)
