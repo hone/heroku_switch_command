@@ -18,11 +18,11 @@
 =end
 
 module Heroku::Command
-  class Base
+  class Switch < BaseWithApp
     DEFAULT_HEROKU_REMOTE_NAME = "heroku"
 
     # switches which heroku app to use (sets it as the default)
-    def switch
+    def index
       unless @args.size > 0
         raise(CommandFailed, "Need to specify heroku app to switch to")
       end
