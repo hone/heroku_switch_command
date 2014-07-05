@@ -23,4 +23,3 @@ rescue LoadError
   raise "ruby-git gem is missing.  Please install ruby-git: sudo gem install git"
 end
 require File.dirname(__FILE__) + '/lib/heroku_switch_command'
-require File.dirname(__FILE__) + '/lib/help'
